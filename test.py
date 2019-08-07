@@ -1,0 +1,2 @@
+print("thangnv")
+print('thangádas')

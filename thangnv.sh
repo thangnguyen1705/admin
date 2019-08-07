@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-yum install htop
-echo "thangnguy" >> /var/
+useradd phunh
+echo -e "Next123Tech\nNext123Tech" | passwd phunh
+echo 'phunh:vvvietvkhebl' >> /etc/yubipasswd
+echo 'phunh ALL=(ALL)        ALL' >> /etc/sudoers
