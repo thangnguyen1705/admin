@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'openjdk:8-jre-alpine'
+    }
+
+  }
   stages {
     stage('test') {
       parallel {
