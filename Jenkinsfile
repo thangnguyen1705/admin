@@ -2,9 +2,20 @@ pipeline {
   agent any
   stages {
     stage('test') {
-      steps {
-        sh '''docker pull maven:3-alpine
+      parallel {
+        stage('test') {
+          steps {
+            sh '''docker pull maven:3-alpine
 mvn -version'''
+          }
+        }
+
+        stage('test2') {
+          steps {
+            echo 'hello'
+          }
+        }
+
       }
     }
 
